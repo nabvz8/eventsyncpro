@@ -1,59 +1,210 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="300" alt="Laravel Logo" />
 </p>
 
-## About Laravel
+<h1 align="center">EventSync Pro</h1>
+<p align="center"><em>Platform Manajemen Proyek & Tim Berbasis Kanban Board</em></p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-12+-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
+  <img src="https://img.shields.io/badge/Vue.js-3-4FC08D?style=for-the-badge&logo=vue.js&logoColor=white" alt="Vue.js" />
+  <img src="https://img.shields.io/badge/PostgreSQL-16-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/Inertia.js-Monolith-9553E9?style=for-the-badge" alt="Inertia" />
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📌 Tentang Proyek
 
-## Learning Laravel
+**EventSync Pro** adalah aplikasi manajemen proyek dan kolaborasi tim berbasis web yang dirancang untuk membantu organisasi atau tim mengelola alur kerja pengerjaan tugas secara visual menggunakan **Papan Kanban**. Proyek ini dikembangkan sebagai tugas Mata Kuliah **Basis Data**.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Aplikasi ini memungkinkan sebuah *workspace* memiliki banyak proyek, setiap proyek memiliki beberapa tim pelaksana, dan setiap tim memiliki akses data tugas yang terisolasi sesuai keanggotaannya — kecuali bagi Project Leader/Co-Leader yang dapat melihat seluruh data proyek.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## ✨ Fitur Utama
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+| Fitur | Deskripsi |
+|---|---|
+| 🔐 **Autentikasi** | Register, Login, Logout dengan validasi lengkap |
+| 🚀 **Onboarding Wizard** | Alur setup profil & workspace untuk pengguna baru |
+| 🏢 **Multi-Workspace** | Satu akun dapat bergabung atau memiliki beberapa workspace |
+| 📁 **Manajemen Proyek** | Buat proyek dalam workspace dengan role Leader & Co-Leader |
+| 👥 **Manajemen Tim** | Setiap proyek memiliki beberapa tim dengan Leader, Co-Leader, dan Member |
+| 📋 **Kanban Board** | Papan tugas visual dengan kolom status dinamis (To Do, In Progress, Done) |
+| 🖱️ **Drag & Drop** | Pindahkan kartu tugas antar kolom secara langsung dengan HTML5 DnD API |
+| 🔒 **Otorisasi Berlapis** | Anggota tim hanya melihat tugas timnya; Leader proyek melihat semua |
+| 🎨 **Animasi Modern** | Transisi dan animasi dengan Motion JS (stagger, fade, scale) |
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🛠️ Tech Stack
 
-## Contributing
+### Backend
+- **Framework**: Laravel 12+ (PHP 8.2+)
+- **Arsitektur**: Monolith dengan Service-Repository Pattern
+- **Database**: PostgreSQL 16
+- **Real-time**: Laravel Reverb *(direncanakan)*
+- **ORM**: Eloquent dengan UUID sebagai primary key
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Frontend
+- **Framework**: Vue.js 3 (Composition API + `<script setup>`)
+- **Bridge**: Inertia.js (SPA tanpa API terpisah)
+- **State Management**: Pinia
+- **UI Components**: Shadcn-Vue + Reka UI
+- **Animasi**: Motion JS
+- **Styling**: Tailwind CSS v3
 
-## Code of Conduct
+### Tools & Testing
+- **Build**: Vite
+- **Testing**: PHPUnit (Feature Tests)
+- **Version Control**: Git
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 🏗️ Arsitektur
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```
+EventSync Pro (Monolit)
+│
+├── Backend (Laravel 12+)
+│   ├── app/Contracts/       — Interface Repository & Service
+│   ├── app/Repositories/    — Implementasi Eloquent Repository
+│   ├── app/Services/        — Business Logic Layer
+│   ├── app/Http/Controllers/— HTTP Request Handler
+│   └── app/Models/          — Eloquent Models (UUID)
+│
+└── Frontend (Vue 3 + Inertia)
+    └── resources/js/
+        ├── Features/        — Feature-based Components
+        │   ├── Tasks/       — Kanban Board, Task Card, Create Modal
+        │   ├── Teams/       — Team List Card
+        │   └── Projects/    — Create Project Modal
+        ├── Pages/           — Halaman Inertia (SSR props)
+        ├── Layouts/         — Layout Utama & Guest
+        └── Components/      — Komponen Shared
+```
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🗃️ Skema Database
+
+```
+users
+ └── workspaces (owner_id)
+      └── workspace_members (pivot: role_workspace)
+      └── projects (workspace_id)
+           └── project_members (pivot: role_project)
+           └── task_statuses (project_id, position)
+           └── teams (project_id)
+                └── team_members (pivot: role_team)
+                └── tasks (team_id, status_id, assigned_to)
+```
+
+---
+
+## ⚙️ Cara Instalasi & Menjalankan
+
+### Prasyarat
+- PHP >= 8.2
+- Composer
+- Node.js >= 18
+- PostgreSQL >= 14
+
+### Langkah Instalasi
+
+```bash
+# 1. Clone repositori
+git clone https://github.com/nabvz8/eventsyncpro.git
+cd eventsyncpro
+
+# 2. Install dependensi PHP
+composer install
+
+# 3. Install dependensi Node
+npm install
+
+# 4. Salin file environment
+cp .env.example .env
+
+# 5. Generate application key
+php artisan key:generate
+```
+
+### Konfigurasi Database (`.env`)
+
+```env
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=eventsync_pro
+DB_USERNAME=laravel
+DB_PASSWORD=123
+```
+
+### Migrasi & Seed
+
+```bash
+# Jalankan migrasi dan seed data demo
+php artisan migrate:fresh --seed
+```
+
+### Menjalankan Aplikasi
+
+```bash
+# Terminal 1 — Backend
+php artisan serve
+
+# Terminal 2 — Frontend (dev mode)
+npm run dev
+```
+
+Buka di browser: **http://localhost:8000**
+
+### Akun Demo (setelah seeding)
+
+| Role | Email | Password |
+|---|---|---|
+| Owner | owner@eventsync.com | password |
+| Member | member@eventsync.com | password |
+
+---
+
+## 🧪 Testing
+
+```bash
+# Jalankan seluruh test suite
+php artisan test
+
+# Jalankan test tertentu
+php artisan test --filter TaskTest
+php artisan test --filter TeamTest
+php artisan test --filter ProjectTest
+```
+
+> ✅ **44 tests, 111 assertions** — 100% Passing
+
+---
+
+## 📂 Dokumentasi Tambahan
+
+Dokumentasi teknis tersedia di folder [`/docs`](./docs):
+
+- [`system_analysis.md`](./docs/system_analysis.md) — Analisis sistem & kebutuhan
+- [`project_architecture.md`](./docs/project_architecture.md) — Desain arsitektur
+- [`database_design.md`](./docs/database_design.md) — ERD dan desain database
+- [`database_schema.sql`](./docs/database_schema.sql) — Schema SQL lengkap
+- [`routes_and_controllers.md`](./docs/routes_and_controllers.md) — Daftar rute & controller
+- [`sprint_plan.md`](./docs/sprint_plan.md) — Rencana sprint pengembangan
+
+---
+
+## 👤 Pengembang
+
+Dikembangkan sebagai tugas **Mata Kuliah Basis Data**
+
+---
+
+## 📄 Lisensi
+
+Proyek ini merupakan karya akademik. Seluruh kode ditulis untuk keperluan pembelajaran.
